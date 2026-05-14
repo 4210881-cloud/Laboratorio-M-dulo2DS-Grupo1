@@ -1,0 +1,157 @@
+/* =========================
+   ESTILO GENERAL
+========================= */
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', sans-serif;
+    background-color: #06131f;
+    color: white;
+}
+
+/* =========================
+   ENCABEZADO
+========================= */
+
+#mi-encabezado{
+
+    /* IMAGEN DE FONDO */
+
+    background-image: linear-gradient(
+        rgba(0,0,0,0.55),
+        rgba(0,0,0,0.75)
+    ),
+    url('imagen/PORTADA.jpg');
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    /* TAMAÑO DEL ENCABEZADO */
+
+    height: 100vh;
+
+    /* CENTRAR IMAGEN */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* SOMBRA OSCURA */
+
+    box-shadow: inset 0 -120px 100px rgba(0,0,0,0.8);
+
+    /* POSICION */
+
+    position: relative;
+
+    /* TRAE TODO EL CONTENEDOR DE FONDO AL FRENTE */
+    z-index: 20;
+}
+
+/* =========================
+   IMAGEN CENTRAL
+========================= */
+
+#mi-encabezado img{
+
+    width: 400px;
+    max-width: 90%;
+
+    /* QUITA BORDES */
+
+    border: none;
+    outline: none;
+
+    /* PONE LA IMAGEN AL FRENTE */
+
+    position: relative;
+    z-index: 10;
+
+    /* ELIMINA ESPACIOS */
+
+    display: block;
+
+    /* OCULTA LA IMAGEN CENTRAL PARA DEJAR SOLO EL FONDO */
+    display: none;
+}
+
+/* =========================
+   MENÚ
+========================= */
+
+nav{
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    padding: 15px 0;
+
+    background: rgba(0, 0, 0, 0.35);
+
+    backdrop-filter: blur(8px);
+
+    z-index: 1000;
+
+    transition: 0.4s ease;
+}
+
+/* =========================
+   LISTA DEL MENU
+========================= */
+
+nav ul{
+
+    list-style: none;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    margin-right: 40px;
+    gap: 30px;
+}
+
+/* =========================
+   ITEMS
+========================= */
+
+nav ul li{
+    display: inline-block;
+}
+
+/* =========================
+   LINKS
+========================= */
+
+nav ul li a{
+
+    text-decoration: none;
+    color: white;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    transition: 0.3s ease;
+
+    padding: 10px 15px;
+    border-radius: 8px;
+}
+
+/* =========================
+   EFECTO HOVER
+========================= */
+
+nav ul li a:hover{
+
+    background-color: rgba(0, 217, 255, 0.2);
+
+    color: #00d9ff;
+
+    box-shadow:
+        0 0 10px #00d9ff,
+        0 0 20px rgba(0,217,255,0.5);
+}
